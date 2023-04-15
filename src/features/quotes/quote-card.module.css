@@ -1,0 +1,45 @@
+.wrapper {
+    position: relative;
+
+    padding: 20px 20px 42px;
+
+    max-width: 300px;
+
+    margin: 10px 40px;
+    border: black solid 1px;
+
+    flex-grow: 1;
+}
+
+h1, p {
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.like_button {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+}
+
+.category {
+    font-size: 16px;
+    position: absolute;
+    top: 6px;
+    right: 7px;
+
+    font-style: italic;
+
+    padding: 5px 8px;
+}
+
+@media (max-width: 454px) {
+    .category {
+        font-size: 12px;
+        right: 4px;
+    }
+}

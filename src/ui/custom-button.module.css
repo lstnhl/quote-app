@@ -1,0 +1,18 @@
+.button {
+    cursor: pointer;
+    border: black solid 1px;
+    padding: 5px 9px;
+    margin-bottom: 6px;
+    background: transparent;
+
+    transition: all .1s;
+}
+
+.button:active {
+    background: black;
+    color: white;
+}
+
+.button:hover {
+    border-radius: 5px;
+}
