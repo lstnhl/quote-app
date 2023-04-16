@@ -12,7 +12,6 @@ interface IQuoteCardProps {
 
 const QuoteCard = ({quote, author, category, showCategory}: IQuoteCardProps) => {
     const [isLiked, setIsLiked] = useState(false)
-    const likeUtility = LikeUtility
 
     useEffect(() => {
         const isLiked = LikeUtility.isLiked({quote, author, category})
@@ -20,7 +19,7 @@ const QuoteCard = ({quote, author, category, showCategory}: IQuoteCardProps) => 
     }, [])
 
     const like = () => {
-        likeUtility.like({
+        LikeUtility.like({
             quote,
             author,
             category
@@ -30,7 +29,7 @@ const QuoteCard = ({quote, author, category, showCategory}: IQuoteCardProps) => 
     }
 
     const dislike = () => {
-        likeUtility.dislike({
+        LikeUtility.dislike({
             quote,
             author,
             category

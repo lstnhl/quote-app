@@ -26,7 +26,7 @@ const QuoteList = ({category, limit}: IQuoteListProps) => {
             <div className={s.category}>
                 <h1>{category ? `QUOTES ABOUT ${category.toUpperCase()}` : 'RANDOM QUOTES FROM OVER THE WORLD'}</h1>
             </div>
-            {quotes.map(q => <QuoteCard {...q} showCategory={!category}/>)}
+            {quotes.map(q => <QuoteCard key={q.quote} {...q} showCategory={!category}/>)}
             <div className={s.bottom_section}>
                 {!isLoading &&
                     <CustomButton onClick={loadMore}>

@@ -13,7 +13,7 @@ const Navbar = () => {
                     <span className={s.nav__item_first_short}>Q</span>
                 </NavLink>
                 {categories.map(cat =>
-                    <NavLink to={`/${cat}`} className={s.nav__item}>{cat[0].toUpperCase() + cat.slice(1)}</NavLink>)}
+                    <NavLink key={cat} to={`/${cat}`} className={s.nav__item}>{cat[0].toUpperCase() + cat.slice(1)}</NavLink>)}
             </div>
             <NavLink to='/liked' className={`${s.nav__item} ${s.nav__item_last}`}>
                 <span className={s.nav__item_last_full}>Liked quotes</span>

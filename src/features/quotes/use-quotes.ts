@@ -32,7 +32,6 @@ export const useQuotes = ({category, limit}: IUseQuotesProps): TUseQuotesRespons
 
         if (isLoading) {
             controller.abort()
-            console.log('ABORTED')
         }
 
         setIsLoading(true)
@@ -43,7 +42,6 @@ export const useQuotes = ({category, limit}: IUseQuotesProps): TUseQuotesRespons
             })
             .catch(error => {
                 setError(true)
-                console.log(error.response.data)
                 setStatus(error.response?.data.error || 'Something went wrong...')
             })
             .finally(() => {

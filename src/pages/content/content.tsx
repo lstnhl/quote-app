@@ -11,7 +11,7 @@ const Content = () => {
             <Routes>
                 <Route path='/' element={<QuoteList category='' limit={10}/>}/>
                 {categories.map(cat =>
-                    <Route path={cat} element={<QuoteList category={cat} limit={10}/>}/>
+                    <Route key={cat} path={cat} element={<QuoteList category={cat} limit={10}/>}/>
                 )}
                 <Route path='/liked' element={<LikedQuotes/>}/>
                 <Route path='*' element={<h1 style={{marginTop: '50px'}}>OOPS! PAGE NOT FOUND!</h1>}/>

@@ -31,8 +31,8 @@ const LikedQuotes = () => {
                 </CustomButton>
             }
             <div className={s.liked_quotes}>
-                {likedQuotes.map((quote: IQuote) =>
-                    <QuoteCard {...quote} showCategory/>
+                {likedQuotes.map((q: IQuote) =>
+                    <QuoteCard key={q.quote} {...q} showCategory/>
                 )}
             </div>
         </div>
